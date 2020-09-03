@@ -1,34 +1,18 @@
-# vue-architecture-model
+# 开发结构模板
 
-## Project setup
-```
-yarn install
-```
++ 修改布局模式为 layout + views + components
++ 加入keep-alive
++ 国际化
++ 路由守卫
++ eventBus
++ request
+    + axios
++ filter
+    + dayjs
++ mixins
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 还需要
++ server mock
++ utils
++ directive
