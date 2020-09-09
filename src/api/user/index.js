@@ -15,7 +15,21 @@ export function getUserAjax(params) {
   return request({
     method: "get",
     baseURL: ".",
-    url: ".",
+    url: "/api/getUser",
     params
   });
 }
+// /\/domain\/list\.json/、'/domian/list.json'。
+export const getUserAjaxMock = [
+  // /\/api\/getUser/,
+  "./api/getUser?role=2",
+  "get",
+  {
+    state: 1,
+    errCode: 200,
+    errMsg: null,
+    data: {
+      name: "@name"
+    }
+  }
+];

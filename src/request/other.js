@@ -1,10 +1,10 @@
 // ======================================== 这里可以定义另一种接口情况 ========================================
 import axios from "axios";
-import { OTHER_HOST } from "../config";
+// import { OTHER_HOST } from "../config";
 const AUTH_TOKEN = "xxx";
 const webAxios = axios.create({
   timeout: 5000,
-  baseURL: OTHER_HOST,
+  // baseURL: OTHER_HOST, // 一般来说不设置 用本地部署
   validateStatus(status) {
     // 如果接口返回符合如下就返回resolve否则reject
     return status >= 200 && status < 300; // 默认的  根据后台处理

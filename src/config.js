@@ -1,7 +1,7 @@
 // 项目所有配置项
 
-export const HOST = "http://www.qq.com/api";
-export const OTHER_HOST = "http://www.baidu.com/api";
+// export const HOST = "http://www.qq.com/api";
+// export const OTHER_HOST = "http://www.baidu.com/api";
 
 export const DATE_FORMAT = "YYYY-MM-DD HH:mm";
 export const RELATIVE_DATE_FORMAT = "YYYY-MM-DD";

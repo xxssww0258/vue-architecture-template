@@ -9,11 +9,19 @@ import request from "../../request/index";
  * @returns {Promise} 返回axios
  * @see  文档地址
  */
-export function getUserAjax(params) {
+export function getUserListAjax(params) {
   return request({
     method: "get",
     baseURL: ".",
-    url: ".",
+    url: "/api/getUserList",
     params
   });
 }
+
+export const getUserListAjaxMock = [
+  "./api/getUserList",
+  "get",
+  {
+    "name|4": ["@name"]
+  }
+];

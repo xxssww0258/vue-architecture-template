@@ -1,11 +1,11 @@
 import axios from "axios";
 const AUTH_TOKEN = "xxx";
-import { HOST } from "../config";
+// import { HOST } from "../config";
 const request = axios.create({
   // baseURL:'/mark', // 这里可以做个标识 在 http-proxy-middleware 以这个标识做转发
   // 为什么不采用 /api/* 作为标识转发  因为这台node服务器 可能同时部署另一个前端项目 也需要做转发 所以要自定义标识
   timeout: 5000,
-  baseURL: HOST, // 一般来说不设置 用本地部署
+  // baseURL: HOST, // 一般来说不设置 用本地部署
   validateStatus(status) {
     // 如果接口返回符合如下就返回resolve否则reject
     return status >= 200 && status < 300; // 默认的  根据后台处理

@@ -15,7 +15,6 @@
 <script>
 import Footer from "./footer";
 import Header from "./header";
-import { routes } from "../../router";
 import { CACHE_VIEWS } from "../../config";
 export default {
   components: { Header, Footer },
@@ -24,21 +23,8 @@ export default {
       CACHE_VIEWS
     };
   },
-  methods: {
-    digui(arr) {
-      return arr.map(x => {
-        if (x.children) {
-          return this.digui(x.children);
-        }
-        return [x];
-      });
-    }
-  },
-  mounted() {
-    console.log(routes);
-    console.log(routes.flatMap(x => x.children));
-    console.log(this.$store);
-  }
+  methods: {},
+  mounted() {}
 };
 </script>
 

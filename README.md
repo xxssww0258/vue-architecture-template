@@ -1,4 +1,4 @@
-# 开发结构模板
+# vue开发结构模板
 
 + 修改布局模式为 layout + views + components
 + 加入keep-alive
@@ -10,9 +10,8 @@
 + filter
     + dayjs
 + mixins
-
-
-## 还需要
-+ server mock
-+ utils
++ mock
 + directive
+
+## 初始化
++ 配置代理服务器
