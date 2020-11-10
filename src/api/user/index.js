@@ -10,7 +10,7 @@ import { USER_ROLE } from "../constant/index";
  * @returns {Promise} 返回axios
  * @see  文档地址
  */
-export function getUserAjax(params) {
+export function signInAjax(params) {
   params.role = params.role || USER_ROLE.COMMON;
   return request({
     method: "get",
@@ -20,7 +20,7 @@ export function getUserAjax(params) {
   });
 }
 // /\/domain\/list\.json/、'/domian/list.json'。
-export const getUserAjaxMock = [
+export const signInAjaxMock = [
   // /\/api\/getUser/,
   "./api/getUser?role=2",
   "get",
@@ -29,7 +29,8 @@ export const getUserAjaxMock = [
     errCode: 200,
     errMsg: null,
     data: {
-      name: "@name"
+      name: "@name",
+      token: "@string"
     }
   }
 ];

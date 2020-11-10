@@ -10,7 +10,8 @@ var server = http.createServer(function(req, res) {
         errCode: 200,
         errMsg: "这是服务器数据",
         data: {
-          name: "张三"
+          name: "张三",
+          token: "asdfasdfasdf"
         }
       })
     );

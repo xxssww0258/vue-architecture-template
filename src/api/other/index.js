@@ -22,6 +22,14 @@ export const getUserListAjaxMock = [
   "./api/getUserList",
   "get",
   {
-    "name|4": ["@name"]
+    state: 1,
+    errCode: 200,
+    errMsg: null,
+    "data|4": [
+      {
+        name: "@name",
+        token: "@string"
+      }
+    ]
   }
 ];

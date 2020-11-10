@@ -6,11 +6,12 @@
     <div>
       时间： <span> {{ Date.now() | dateFormat }} </span>
     </div>
+    <button @click="handleSignIn">登录</button>
+    <button @click="handleSignOut">退出登录</button>
   </div>
 </template>
 
 <script>
-import { getUserAjax } from "../../api/user/index";
 import { getUserListAjax } from "../../api/other/index";
 import AboutItem from "./components/AboutItem";
 export default {
@@ -21,10 +22,19 @@ export default {
   components: {
     AboutItem
   },
+  methods: {
+    handleSignIn() {
+      this.$store.dispatch("signIn").then(res => {
+        console.log("登录成功:", res);
+      });
+    },
+    handleSignOut() {
+      this.$store.dispatch("signOut").then(() => {
+        console.log("退出成功");
+      });
+    }
+  },
   mounted() {
-    getUserAjax({}).then(res => {
-      console.log("getUserAjax\n", res);
-    });
     getUserListAjax({}).then(res => {
       console.log("getUserListAjax\n", res);
     });

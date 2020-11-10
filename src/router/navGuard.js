@@ -22,6 +22,21 @@ function _userVerification() {
  */
 export default function navGuard(router) {
   console.log("路由表:", router);
+  // + 测试用户
+  // + 已登陆
+  //   + 校验期限
+  //       + 推出重新登陆
+  //   + 更新用户信息(第一次)
+  //   + 校验权限
+  //       + 白名单
+  //           + 进入页面
+  //       + 无权限页面
+  // + 未登陆
+  //   + 白名单
+  //       + 进入页面
+  //   + 跳转登陆
+  //       + 记录上一页
+  //       + 登陆成功,判断上一页是否有权限进入,回到上一页,删除记录
 
   router.beforeEach((to, from, next) => {
     switch (true) {
